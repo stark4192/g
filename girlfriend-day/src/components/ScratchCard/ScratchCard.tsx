@@ -2,7 +2,6 @@ import "./ScratchCard.css";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import confetti from "canvas-confetti";
-import { playScratch, playPop } from "../../utils/sounds";
 
 interface ScratchCardProps {
   onComplete: () => void;
