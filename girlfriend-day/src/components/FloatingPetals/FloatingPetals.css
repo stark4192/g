@@ -1,0 +1,11 @@
+.petal{
+
+    position:absolute;
+
+    top:-80px;
+
+    animation:fall linear infinite;
+
+    opacity:.8;
+
+}

@@ -1,0 +1,115 @@
+.envelope-scene {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    padding-bottom: 40px; /* Gives room at the bottom for scrolling/spacing */
+}
+
+.envelope-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-paper {
+    position: absolute;
+    width: 320px;
+    height: 460px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 2px solid #ffc3da;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.letter-paper h3 {
+    font-size: 22px;
+    color: #ff5e9c;
+    margin: 0 0 10px 0;
+}
+
+.letter-paper p {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #444;
+    margin: 4px 0;
+}
+
+.envelope {
+    position: absolute;
+    width: 320px;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.03);
+}
+
+.hint {
+    margin-top: 20px;
+    color: #666;
+    font-size: 18px;
+    animation: floating 2s infinite;
+}
+
+/* Romantic Memories Button - Shifted Lower */
+.memories-btn {
+    margin-top: 110px; /* Increased margin to push the button lower down */
+    padding: 14px 28px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 117, 140, 0.4);
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    transition: all 0.3s ease;
+}
+
+.memories-btn span {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.memories-btn small {
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.memories-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(255, 117, 140, 0.55);
+    background: linear-gradient(135deg, #ff5e7e 0%, #ff6fa8 100%);
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}

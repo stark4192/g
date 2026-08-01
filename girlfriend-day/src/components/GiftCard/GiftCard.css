@@ -1,0 +1,166 @@
+.gift-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  perspective: 1500px;
+
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.gift-card {
+  position: relative;
+
+  width: 420px;
+  height: 260px;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gift-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 24px;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- FRONT ---------- */
+
+.card-front {
+  background: linear-gradient(
+    135deg,
+    #fff8fb,
+    #ffe3ef
+  );
+
+  border: 2px solid #ffc7dd;
+
+  color: #333;
+}
+
+.card-front h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-front h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.card-front p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-front small {
+  font-size: 1rem;
+}
+
+/* ---------- BACK ---------- */
+
+.card-back {
+  transform: rotateY(180deg);
+
+  background: transparent;
+}
+
+/* Gift Image */
+
+.gift-image {
+  width: 90%;
+  max-width: 380px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 20px;
+}
+
+/* Button */
+
+.finish-btn {
+  background: #ff5d95;
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 36px;
+
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(255, 93, 149, 0.35);
+
+  transition: 0.3s;
+}
+
+.finish-btn:hover {
+  transform: translateY(-3px);
+  background: #ff3d84;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .gift-card {
+    width: 90vw;
+    height: 56vw;
+  }
+
+  .card-front h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-front h2 {
+    font-size: 1.2rem;
+  }
+
+  .card-front p {
+    font-size: 1rem;
+  }
+
+  .gift-image {
+    width: 95%;
+  }
+}

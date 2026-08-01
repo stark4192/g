@@ -1,0 +1,27 @@
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:heartFloat linear infinite;
+
+    opacity:.5;
+
+}
+
+@keyframes heartFloat{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+    }
+
+}
